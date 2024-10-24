@@ -8,7 +8,7 @@
 
 **Paso 1.** Creación de un entorno virtual de Anaconda. Instalamos Anaconda desde [aquí](https://www.anaconda.com/products/individual). Una vez instalado, abrimos un terminal y ejecutamos los siguientes comandos:
 ```bash
-conda create -n DDSI python # Crear entorno virtual
+conda create -n DDSI python=3.9 # Crear entorno virtual
 conda activate DDSI # Activar entorno virtual
 conda install -c anaconda postgresql # Instalar PostgreSQL
 conda install -c anaconda psycopg2 # Instalar driver de Python para PostgreSQL
