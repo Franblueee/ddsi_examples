@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  
+  <h1>Cuentas</h1>
+  <table>
+    <tr>
+      <th>idcuenta</th>
+      <th>saldo</th>
+    </tr>
+    {% for cuenta in cuentas %}
+      <tr>
+        <td>{{ cuenta['idcuenta'] }}</td>
+        <td>{{ cuenta['saldo'] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  <hr> 
+  
+  <h1>Movimientos</h1>
+
+  <a class="action" href="{{ url_for('movimientos.create') }}">Nuevo</a>
+
+  <table>
+    <tr>
+      <th>idcuenta</th>
+      <th>saldo</th>
+    </tr>
+    {% for mov in movimientos %}
+      <tr>
+        <td>{{ mov['idcuenta'] }}</td>
+        <td>{{ mov['cantidad'] }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+
+  <hr>
+{% endblock %}

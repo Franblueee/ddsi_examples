@@ -17,7 +17,7 @@ cantidad = float(cantidad)
 # Crear un cursor
 cur = conn.cursor()
 
-cur = conn.cursor()
+# Crear checkpoint
 cur.execute("BEGIN;")
 cur.execute("SAVEPOINT s1;")
 

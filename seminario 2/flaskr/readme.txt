@@ -1,0 +1,1 @@
+The code in this folder has been obtained from the Flask repository on GitHub: https://github.com/pallets/flask/tree/3.1.0/examples/tutorial

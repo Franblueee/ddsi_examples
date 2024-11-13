@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Nuevo movimiento{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="cuenta_origen">Cuenta de origen</label>
+    <input name="cuenta_origen" id="cuenta_origen" value="{{ request.form['cuenta_origen'] }}" required>
+    <label for="cuenta_destino">Cuenta de destino</label>
+    <input name="cuenta_destino" id="cuenta_destino" value="{{ request.form['cuenta_destino'] }}" required>
+    <label for="cantidad">Cantidad</label>
+    <input name="cantidad" id="cantidad" type="number" value="{{ request.form['cantidad'] }}" required>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}

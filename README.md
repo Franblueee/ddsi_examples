@@ -12,6 +12,7 @@ conda create -n DDSI python=3.9 # Crear entorno virtual
 conda activate DDSI # Activar entorno virtual
 conda install -c anaconda postgresql # Instalar PostgreSQL
 conda install -c anaconda psycopg2 # Instalar driver de Python para PostgreSQL
+pip install Flask # Instalar Flask (seminario 2)
 ```
 
 **Paso 2.** Inicialización de PostgreSQL y creación de una base de datos. Para ello, abrimos un terminal y ejecutamos los siguientes comandos:
@@ -60,3 +61,19 @@ CREATE DATABASE banco; # Crear base de datos test
 \i crear_banco.sql # Ejecutar script de SQL para crear tabla
 ```
 No te olvides de modificar el fichero `ejemplo.py` con los datos de tu usuario y contraseña de PostgreSQL.
+
+## Seminario 2
+
+Para poder ejecutar el ejemplo correspondiente al Seminario 2 tendremos que crear la base de datos "banco" (si no la hemos creado ya) e instalar `Flask` en el entorno de Anaconda (si no lo hemos instalado ya). Después, podremos ejecutar las dos aplicaciones web que se encuentran en la carpeta `seminario2`. 
+
+"flaskr" se ha creado siguiendo el tutorial de Flask que se encuentra en la [documentación oficial](https://flask.palletsprojects.com/en/stable/tutorial/). Para ejecutar la aplicación web, abrimos un terminal y ejecutamos los siguientes comandos:
+```bash
+flask flask --app flaskr init-db # Inicializar base de datos
+flask flask --app flaskr run # Ejecutar aplicación web
+```
+
+"banco" se ha creado a partir de "flaskr" y otorga una interfaz web a las funcionalidades del script del seminario 1. Para ejecutar la aplicación web, abrimos un terminal y ejecutamos los siguientes comandos:
+```bash
+flask flask --app banco init-db # Inicializar base de datos
+flask flask --app banco run # Ejecutar aplicación web
+```
