@@ -68,12 +68,12 @@ Para poder ejecutar el ejemplo correspondiente al Seminario 2 tendremos que crea
 
 "flaskr" se ha creado siguiendo el tutorial de Flask que se encuentra en la [documentación oficial](https://flask.palletsprojects.com/en/stable/tutorial/). Para ejecutar la aplicación web, abrimos un terminal y ejecutamos los siguientes comandos:
 ```bash
-flask flask --app flaskr init-db # Inicializar base de datos
-flask flask --app flaskr run # Ejecutar aplicación web
+flask --app flaskr init-db # Inicializar base de datos
+flask --app flaskr run # Ejecutar aplicación web
 ```
 
 "banco" se ha creado a partir de "flaskr" y otorga una interfaz web a las funcionalidades del script del seminario 1. Para ejecutar la aplicación web, abrimos un terminal y ejecutamos los siguientes comandos:
 ```bash
-flask flask --app banco init-db # Inicializar base de datos
-flask flask --app banco run # Ejecutar aplicación web
+flask --app banco init-db # Inicializar base de datos
+flask --app banco run # Ejecutar aplicación web
 ```
